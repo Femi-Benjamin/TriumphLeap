@@ -1,19 +1,12 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./layouts/Recieve";
-import Services from "./pages/Services";
-import AboutUs from "./pages/AboutUs";
+import Hero from "./components/Hero";
+import Expertise from "./components/Expertise";
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/aboutus" element={<AboutUs />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <main className="w-full min-h-screen bg-[#1a0b2e] text-white overflow-x-hidden">
+      <Hero />
+      <Expertise />
+    </main>
   );
 }
 

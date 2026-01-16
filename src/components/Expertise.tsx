@@ -1,100 +1,120 @@
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import contentcreation from "../assets/contentcreation.png";
-import onlinebrand from "../assets/onlinebrand.png";
-import productdesign from "../assets/productdesign.png";
-import searchengine from "../assets/searchengine.png";
+import { useState } from "react";
+import { Plus } from "lucide-react";
 
-export default function Expertise() {
-  const expertiseItems = [
-    {
-      image: onlinebrand,
-      alt: "Online Brand",
-      text: "Online Brand Management",
-      tags: [
-        "Brand Strategy Development",
-        "Social Media Management",
-        "Brand Identity Design",
-        "Reputation Management",
-      ],
-    },
-    {
-      image: productdesign,
-      alt: "Product Design",
-      text: "Product Design(Branding)",
-      tags: [
-        "Logo Design",
-        "Packaging Design",
-        "Brand Guidelines",
-        "Visual Identity Systems",
-      ],
-    },
-    {
-      image: searchengine,
-      alt: "Search Engine Optimization",
-      text: "Search Engine Optimization",
-      tags: [
-        "Technical SEO",
-        "Local SEO",
-        "SEO Audits",
-        "On-page SEO",
-        "Off-page SEO",
-      ],
-    },
-    {
-      image: contentcreation,
-      alt: "Content Creation",
-      text: "Content Creation",
-      tags: ["Flyers", "Promotional Videos", "Write-ups", "Animations"],
-    },
-  ];
+// Using lucide-react for icons if available, otherwise will fallback to simple svg or use text
+// Try to import icons, if not found I will replace with simple SVGs in valid code.
 
+const AccordionItem = ({
+  title,
+  isOpen,
+  onClick,
+}: {
+  title: string;
+  isOpen: boolean;
+  onClick: () => void;
+}) => {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-12">
-        <h1 className="font-bold text-4xl md:text-5xl lg:text-7xl pb-6">
-          Our <span className="text-primary font-title">Expertise</span>
-        </h1>
-        <p className="font-normal text-lg md:text-xl lg:text-2xl">
-          Delivering Innovative Digital Marketing Solutions to Elevate Your
-          Brand
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-8 gap-6">
-        {expertiseItems.map((item, index) => (
-          <div
-            key={index}
-            className="relative group overflow-hidden rounded-3xl"
-          >
-            <img
-              src={item.image}
-              alt={item.alt}
-              className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
-            />
-            <Link to="/services">
-              <div className="absolute inset-0 hover:bg-black hover:bg-opacity-30 flex flex-col justify-between md:p-6 md:px-5 px-3 text-white">
-                <div className="flex justify-between itemsstart items-center">
-                  <h2 className="md:font-medium font-normal md:text-2xl text-lg">
-                    {item.text}
-                  </h2>
-                  <ArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-                <div className="flex flex-wrap gap-2 mt4">
-                  {item.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="border xl:px-3 md:px-2 md:py-1 md:p-0 p-1 rounded-full xl:text-lg md:text-sm text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-          </div>
-        ))}
+    <div className="border-b border-gray-700">
+      <button
+        className="w-full py-4 flex items-center justify-between text-left group hover:bg-white/5 transition-colors px-2"
+        onClick={onClick}
+      >
+        <span className="text-lg font-medium text-gray-200 group-hover:text-white">
+          {title}
+        </span>
+        <Plus
+          className={`w-6 h-6 text-gray-400 transition-transform duration-300 ${
+            isOpen ? "rotate-45" : ""
+          }`}
+        />
+      </button>
+      <div
+        className={`overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-40" : "max-h-0"
+        }`}
+      >
+        <div className="p-4 text-gray-400 text-sm">
+          {/* Placeholder content for accordion */}
+          Detailed description of {title} services and capabilities. We deliver
+          high quality results tailored to your needs.
+        </div>
       </div>
     </div>
   );
-}
+};
+
+const Expertise = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggleAccordion = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className="w-full bg-[#0a0510] py-20 px-4 md:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center gap-2 mb-4">
+          <div className="w-8 h-0.5 bg-[#FFCF4D]"></div>
+          <span className="text-[#FFCF4D] font-bold tracking-wider text-sm uppercase">
+            Our Expertise
+          </span>
+        </div>
+
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
+          Comprehensive marketing solutions for growth
+        </h2>
+
+        {/* Main Content Area */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          {/* Large Black Box (Placeholder) */}
+          <div className="w-full aspect-video bg-black border border-gray-800 rounded-2xl shadow-2xl relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-to-tr from-purple-900/20 to-transparent opacity-50"></div>
+            {/* You would place the video or main image here */}
+            <div className="absolute inset-0 flex items-center justify-center text-gray-600 font-mono text-sm">
+              [Visual Content Area]
+            </div>
+          </div>
+
+          {/* Service List */}
+          <div className="flex flex-col justify-center">
+            <AccordionItem
+              title="Video Edits"
+              isOpen={openIndex === 0}
+              onClick={() => toggleAccordion(0)}
+            />
+            <AccordionItem
+              title="Motion Graphics and Explainer Videos"
+              isOpen={openIndex === 1}
+              onClick={() => toggleAccordion(1)}
+            />
+            <AccordionItem
+              title="3D Product Design and Animation"
+              isOpen={openIndex === 2}
+              onClick={() => toggleAccordion(2)}
+            />
+          </div>
+        </div>
+
+        {/* Logos */}
+        <div className="border-t border-gray-800 pt-12">
+          <div className="flex flex-wrap justify-between items-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-500">
+            {/* Text fallbacks for logos if assets aren't ready, styled to look like the image */}
+            <span className="text-2xl font-bold font-sans">make</span>
+            <span className="text-2xl font-bold font-sans">make</span>
+            <div className="flex items-center gap-2">
+              <span className="text-3xl font-bold">A</span>{" "}
+              <span className="text-2xl font-semibold">Adobe</span>
+            </div>
+            <span className="text-2xl font-bold font-sans">make</span>
+            <div className="flex items-center gap-2">
+              <span className="text-3xl font-bold">A</span>{" "}
+              <span className="text-2xl font-semibold">Adobe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Expertise;
