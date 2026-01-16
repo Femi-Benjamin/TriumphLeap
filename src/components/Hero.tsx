@@ -9,8 +9,7 @@ const Hero = () => {
           I'm Triumph
         </h1>
         <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-200 to-purple-400 bg-clip-text text-transparent mb-6">
-          Video Editor & Motion Designer. Video Editor & Motion Designer. Editor
-          & Motion Designer.
+          Video Editor & Motion Designer.
         </h2>
         <p className="text-sm md:text-base text-gray-300 mb-10 tracking-wide">
           6+ years of Experience to make sure your audience is always glued to
