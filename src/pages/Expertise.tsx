@@ -65,7 +65,7 @@ const Expertise = () => {
         <div className="flex flex-col gap-10 mb-24">
           {/* Large Video Placeholder */}
           <div
-            className="w-full aspect-[16/10] md:aspect-[16/9] rounded-3xl overflow-hidden group relative shadow-[0_0_50px_rgba(168,85,247,0.15)]"
+            className="w-full aspect-[21/12] md:aspect-[16/9] rounded-3xl overflow-hidden group relative shadow-[0_0_50px_rgba(168,85,247,0.15)]"
             style={{
               background: "linear-gradient(to top, #4C12BF, #FFFFFF)",
               padding: "3px",
@@ -75,7 +75,7 @@ const Expertise = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src="https://www.youtube.com/embed/3IHXNbRLZRo?si=TZh5EB_xXnK4Nnsx"
+                src="https://www.youtube.com/embed/3IHXNbRLZRo?si=TZh5EB_xXnK4Nnsx&autoplay=1&mute=1"
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
