@@ -1,6 +1,6 @@
 export default function Component() {
   return (
-    <div className="md:min-h-screen bg-gradient-to-b from-[#000000] to-[#4C12BF] md:px-0 px-6 pb-10 md:pt-36">
+    <div className="md:min-h-screen bg-gradient-to-b from-[#000000] to-[#4C12BF] pb-10 pt-20 md:pt-36">
       <div className="max-w-7xl mx-auto xl:px-22 md:px-10 px-5">
         {/* Main Content Container */}
         <div className="relative mb-8 flex justify-center xl:px-4">

@@ -1,6 +1,6 @@
 export default function Proof() {
   return (
-    <div className="md:min-h-screen bg-gradient-to-b from-[#000000] to-[#4C12BF] md:px-0 px-6 py-12">
+    <div className="md:min-h-screen bg-gradient-to-b from-[#000000] to-[#4C12BF] py-12">
       <div className="max-w-7xl mx-auto xl:px-22 md:px-10 px-5">
         {/* Header */}
         <div className="mb-8">
