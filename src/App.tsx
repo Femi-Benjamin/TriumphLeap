@@ -2,8 +2,8 @@ import Hero from "@/components/Hero";
 import Expertise from "./components/Expertise";
 import Proof from "./components/Proof";
 import Testimonials from "./components/Testimonials";
-import Pricing from "@/components/Pricing";
 import Footer from "./components/Footer";
+// import Pricing from "@/components/Pricing";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       <Expertise />
       <Proof />
       <Testimonials />
-      <Pricing />
       <Footer />
+      {/* <Pricing /> */}
     </main>
   );
 }

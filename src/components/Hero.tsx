@@ -16,7 +16,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-black tracking-tight mb-4"
+          className="text-6xl md:text-9xl font-black tracking-loose mb-4"
         >
           I'm Triumph
         </motion.h1>
@@ -24,7 +24,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-200 to-purple-400 bg-clip-text text-transparent mb-6"
+          className="text-3xl md:text-5xl font-bold bg-gradient-to-b from-purple-200 to-purple-600 bg-clip-text text-transparent mb-6"
         >
           Video Editor & Motion Designer.
         </motion.h2>
@@ -32,7 +32,7 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="text-sm md:text-base text-gray-300 mb-10 tracking-wide"
+          className="text-base md:text-md text-gray-300 mb-10 tracking-wide"
         >
           6+ years of Experience to make sure your audience is always glued to
           their screeens
@@ -47,14 +47,14 @@ const Hero = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-[#FFCF4D] text-black font-bold rounded-lg hover:bg-[#ffe18f] transition-colors shadow-lg shadow-yellow-500/20"
+            className="px-8 py-3 bg-[#FED65E] text-[#4C12BF] font-bold rounded-lg hover:bg-[#FFCF4D] transition-colors shadow-lg shadow-yellow-500/20"
           >
             Let's Talk
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-[#5B21B6] text-white font-bold rounded-lg hover:bg-[#6D28D9] transition-colors border border-purple-500/30"
+            className="px-8 py-3 bg-[#5B21B6] text-white font-bold rounded-lg hover:bg-[#6D28D9] transition-colors border border-[#FED65E]"
           >
             See our work
           </motion.button>

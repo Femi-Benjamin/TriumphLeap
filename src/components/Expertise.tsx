@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Plus } from "lucide-react";
 
-// Using lucide-react for icons
-
 const AccordionItem = ({
   title,
   isOpen,
@@ -66,16 +64,24 @@ const Expertise = () => {
         {/* Main Content Area - Vertical Stack */}
         <div className="flex flex-col gap-10 mb-24">
           {/* Large Video Placeholder */}
-          <div className="w-full aspect-[16/7] bg-black border border-purple-500/50 rounded-3xl shadow-[0_0_50px_rgba(168,85,247,0.15)] relative overflow-hidden group">
-            {/* Gradient Border Effect */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/10 to-transparent"></div>
-
-            {/* Content Placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              {/* Optional: Add a play button or placeholder icon here if desired */}
-              <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[20px] border-l-white border-b-[10px] border-b-transparent ml-1"></div>
-              </div>
+          <div
+            className="w-full aspect-[16/10] md:aspect-[16/9] rounded-3xl overflow-hidden group relative shadow-[0_0_50px_rgba(168,85,247,0.15)]"
+            style={{
+              background: "linear-gradient(to top, #4C12BF, #FFFFFF)",
+              padding: "3px",
+            }}
+          >
+            <div className="w-full h-full bg-black rounded-3xl overflow-hidden">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/3IHXNbRLZRo?si=TZh5EB_xXnK4Nnsx"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                allowFullScreen
+                className="w-full h-full"
+              ></iframe>
             </div>
           </div>
 
