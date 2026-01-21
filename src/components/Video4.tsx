@@ -12,7 +12,7 @@ export default function Component() {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://www.youtube.com/embed/to-62t3OxUM?si=ual4BZluO01PyI6k"
+                  src="https://www.youtube.com/embed/zDrMw4qObng?si=WGT-CQy8XlcC-Miv"
                   title="YouTube video player"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -26,7 +26,9 @@ export default function Component() {
 
         {/* Select Punters Section */}
         <div className="mb-16">
-          <h2 className="text-white text-2xl font-bold mb-8">Select Punters</h2>
+          <h2 className="text-white text-base md:text-5xl font-bold mb-8">
+            KLOUDAA LOGO ANIMATION
+          </h2>
 
           <div className="flex md:gap-8 gap-3">
             <div>

@@ -88,7 +88,9 @@ export default function Component() {
 
         {/* Select Punters Section */}
         <div className="mb-16">
-          <h2 className="text-white text-2xl font-bold mb-8">Select Punters</h2>
+          <h2 className="text-white text-base md:text-5xl font-bold mb-8">
+            XEBIT PROJECT
+          </h2>
 
           <div className="grid grid-cols-2 gap-y-8 gap-x-4 md:flex md:gap-8">
             <div>

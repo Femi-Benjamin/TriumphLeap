@@ -39,7 +39,9 @@ export default function Proof() {
 
         {/* Select Punters Section */}
         <div className="mb-16">
-          <h2 className="text-white text-2xl font-bold mb-8">Select Punters</h2>
+          <h2 className="text-white text-base md:text-5xl font-bold mb-8">
+            IDEA SPRINT
+          </h2>
 
           <div className="flex md:gap-8 gap-3">
             <div>
