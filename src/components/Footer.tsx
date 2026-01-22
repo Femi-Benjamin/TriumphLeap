@@ -150,7 +150,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between text-xs text-purple-200 gap-6 md:gap-0">
           {/* Contact Info (Left) */}
           <div className="flex flex-col md:flex-row items-center gap-2 md:gap-8">
-            <span>+1 (415) 655-1002</span>
+            <span>+234 81-4115-1183</span>
             <span className="hidden md:inline">|</span>
             <span>830 Stewart Drive, #212, Sunnyvale, CA, USA, 94085</span>
           </div>
@@ -178,7 +178,7 @@ const Footer = () => {
               Privacy Policy
             </a>
             <span className="hidden md:inline">|</span>
-            <span>© 2024, Titan Leap</span>
+            <span>© {new Date().getFullYear()}, Titan Leap</span>
           </div>
         </div>
       </div>
